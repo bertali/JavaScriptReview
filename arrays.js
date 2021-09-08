@@ -123,3 +123,70 @@ console.log(groceryList);
 //Should be: console.log(array.method(first, last+1));
 console.log(groceryList.slice(1, 4));
 
+
+//ARRAYS AND FUNCTIONS
+//Take a look at the following example where we call .push() on an array inside a function. Recall, the .push() method mutates, or changes, an array:
+
+const flowers = ['peony', 'daffodil', 'marigold'];
+ 
+function addFlower(arr) {
+  arr.push('lily');
+}
+ 
+addFlower(flowers);
+ 
+console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily']
+
+//The flowers array that has 3 elements.
+//The function addFlower() has a parameter of arr uses .push() to add a 'lily' element into arr.
+//We call addFlower() with an argument of flowers which will execute the code inside addFlower.
+//We check the value of flowers and it now includes the 'lily' element! The array was mutated!
+
+//1.In main.js, there is an array concept. There is also a function changeArr that will assign the element in index 3 of an array to 'MUTATED'. The function changeArr was called with an argument of concept.
+
+const concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);
+
+console.log(concept);
+
+
+//2. Under the console.log() statement, define another function named removeElement that takes a parameter of newArr. Inside the function body call .pop() on newArr.
+
+function removeElement(newArr){
+    newArr.pop();
+  }
+  
+  removeElement(concept);
+  
+  console.log(concept);
+
+
+  //NESTED ARRAYS
+
+  //Earlier we mentioned that arrays can store other arrays. When an array contains another array it is known as a nested array. Examine the example below:
+
+  const nestedArr = [[1], [2, 3]];
+
+
+  //To access the nested arrays we can use bracket notation with the index value, just like we did to access any other element:
+
+  const nestedArr = [[1], [2, 3]];
+ 
+  console.log(nestedArr[1]); // Output: [2, 3]
+
+
+  //Notice that nestedArr[1] will grab the element in index 1 which is the array [2, 3]. Then, if we wanted to access the elements within the nested array we can chain, or add on, more bracket notation with index values.
+
+  const nestedArr = [[1], [2, 3]];
+ 
+  console.log(nestedArr[1]); // Output: [2, 3]
+  console.log(nestedArr[1][0]); // Output: 2
+
+
+
+    
