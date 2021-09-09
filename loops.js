@@ -101,3 +101,117 @@ console.log(mutualFollowers);
 
 //THE WHILE LOOP
 
+// A for loop that prints 1, 2, and 3
+for (let counterOne = 1; counterOne < 4; counterOne++){
+  console.log(counterOne);
+}
+ 
+// A while loop that prints 1, 2, and 3
+let counterTwo = 1;
+while (counterTwo < 4) {
+  console.log(counterTwo);
+  counterTwo++;
+}
+
+//The counterTwo variable is declared before the loop. We can access it inside our while loop since it’s in the global scope.
+//We start our loop with the keyword while followed by our stopping condition, or test condition. This will be evaluated before each round of the loop. While the condition evaluates to true, the block will continue to run. Once it evaluates to false the loop will stop.
+//Next, we have our loop’s code block which prints counterTwo to the console and increments counterTwo.
+//So you may be wondering when to use a while loop! The syntax of a for loop is ideal when we know how many times the loop should run, but we don’t always know this in advance. Think of eating like a while loop: when you start taking bites, you don’t know the exact number you’ll need to become full. Rather you’ll eat while you’re hungry. In situations when we want a loop to execute an undetermined number of times, while loops are the best choice.
+
+
+const cards = ['diamond', 'spade', 'heart', 'club'];
+
+//Create a while loop with a condition that checks if the currentCard does not have that value 'spade'.
+
+//Inside the block of your while loop, add the following line of code:
+
+currentCard = cards[Math.floor(Math.random() * 4)];
+
+//Math.floor(Math.random() * 4) will give us a random number from 0 to 3. We’ll use this number to index the cards array, and assign the value of currentCard to a random element from that array.
+
+/* let currentCard = 0;
+while (currentCard != 'spade') {
+  currentCard = cards[Math.floor(Math.random() * 4)];
+  console.log(currentCard);
+  } */
+
+//DO... WHILE STATEMENTS
+
+//In some cases, you want a piece of code to run at least once and then loop based on a specific condition after its initial run. This is where the do...while statement comes in.
+
+//A do...while statement says to do a task once and then keep doing it until a specified condition is no longer met. The syntax for a do...while statement looks like this:
+
+let countString = '';
+let i = 0;
+ 
+do {
+  countString = countString + i;
+  i++;
+} while (i < 5);
+ 
+console.log(countString);
+
+
+//Note that the while and do...while loop are different! Unlike the while loop, do...while will run at least once whether or not the condition evaluates to true.
+
+const firstMessage = 'I will print!';
+const secondMessage = 'I will not print!'; 
+ 
+// A do while with a stopping condition that evaluates to false
+do {
+ console.log(firstMessage)
+} while (true === false);
+ 
+// A while loop with a stopping condition that evaluates to false
+while (true === false){
+  console.log(secondMessage)
+};
+
+
+
+//THE BREAK KEYWORD
+
+//Imagine we’re looking to adopt a dog. We plan to go to the shelter every day for a year and then give up. But what if we meet our dream dog on day 65? We don’t want to keep going to the shelter for the next 300 days just because our original plan was to go for a whole year. In our code, when we want to stop a loop from continuing to execute even though the original stopping condition we wrote for our loop hasn’t been met, we can use the keyword break.
+
+//The break keyword allows programs to “break” out of the loop from within the loop’s block.
+
+//Let’s check out the syntax of a break keyword:
+
+for (let i = 0; i < 99; i++) {
+  if (i > 2 ) {
+     break;
+  }
+  console.log('Banana.');
+}
+ 
+console.log('Orange you glad I broke out the loop!');
+
+//This is the output for the above code:
+
+/* Banana.
+Banana.
+Banana.
+Orange you glad I broke out the loop! */
+
+//break statements can be especially helpful when we’re looping through large data structures! With breaks, we can add test conditions besides the stopping condition, and exit the loop when they’re met.
+
+//Exercice:
+
+//1.Log each element from rapperArray in a for loop with the iterator variable i.
+//2.After the for loop, log the string "And if you don't know, now you know." to the console. Note: since there’s a single quote character, ', in our string, we can use double quotes around the string to make sure character prints.
+//3.Add a break inside your loop’s block that breaks out of the loop if the element at the current index in the rapperArray is 'Notorious B.I.G.'.
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Write your code below
+
+for (let i = 0; i < rapperArray.length; i++) {
+  console.log(rapperArray[i]);
+  if (rapperArray[i] === "Notorious B.I.G.") {
+    break;
+  }
+}
+
+console.log("And if you don't know, now you know.")
+
+
